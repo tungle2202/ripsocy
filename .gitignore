@@ -1,3 +1,1 @@
-scripts/tools/core_shredder.cpp
-scripts/tools/core_encryptor.cpp
-scripts/tools/core_deleter.cpp
+scripts/tools/*.cpp
