@@ -16,8 +16,8 @@ I don't give a shit about money, I just wanted to save the world.
 So, instead of encrypting every file, I will destroy all of it, nothing left:
 
   - rewrite every data with bit '1'
-  - encrypt everything, encryption key will self-destruct after the process
-  - delete inodes/links
+  - encrypt every valuable things, encryption key will self-destruct after the process
+  - delete inodes/links. self-destruct all orchestrating scripts to leave investigators with dead ends"
 
 ---
 
