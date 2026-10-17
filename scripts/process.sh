@@ -4,10 +4,10 @@ sh ./rewrite.sh
 sh ./encrypt.sh
 sh ./delete.sh
 
-shred -n 3 -u -z ./rewite.sh
-shred -n 3 -u -z ./encrypt.sh
-shred -n 3 -u -z ./delete.sh
+shred -n 1 -z ./rewrite.sh && rm ./rewrite.sh
+shred -n 1 -z ./encrypt.sh && rm ./encrypt.sh
+shred -n 1 -z ./delete.sh && rm ./delete.sh
 
-shred -n 3 -u -z ./tools/core_shredder
-shred -n 3 -u -z ./tools/core_encryptor
-shred -n 3 -u -z ./tools/core_deleter
+shred -n 1 -z ./tools/core_shredder && rm ./tools/core_shredder
+shred -n 1 -z ./tools/core_encryptor && rm ./tools/core_encryptor
+shred -n 1 -z ./tools/core_deleter && rm ./tools/core_deleter
