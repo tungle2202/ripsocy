@@ -17,6 +17,5 @@ rm -rf ./tools/
 
 echo "get doomed :)" >>/fsociety/README.md
 echo "get doomed :)" >>/etc/motd
-echo "get doomed :)" >>/home/root/README.md
 
 shred -n 1 -z "$0" && rm "$0"
