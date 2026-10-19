@@ -22,12 +22,9 @@ So, instead of encrypting every file, I will destroy all of it, nothing left:
 ```bash
 git clone https://github.com/tungle2202/ripsocy 
 sudo su
+chmod -R 700 ripsocy/
 cd ripsocy 
 sh ./ripsocy.sh
-sh ./rewrite.sh 
-sh ./encrypte.sh 
-sh ./delete.sh 
-sh ./clean.sh
 ```
 
 ## fsociety
